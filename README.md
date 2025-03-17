@@ -23,12 +23,12 @@
    ```bash
    npm install
 5. **创建 package.json**：
-   
-体验:
-api.nineonepassword.online
-
-
-curl -X POST  https://api.nineonepassword.online/api/chat -H "Content-Type: application/json" -d '{"messages":[{"role":"system","content":"You are a helper"}],"input":"Hi","r1":false,"search":false}'
+6. **test URL**:
+   ```bash
+    api.nineonepassword.online
+8. **体验**:
+      ```bash
+      curl -X POST  https://api.nineonepassword.online/api/chat -H "Content-Type: application/json" -d '{"messages":[{"role":"system","content":"You are a helper"}],"input":"Hi","r1":false,"search":false}'
 
 
 
