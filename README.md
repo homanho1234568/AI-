@@ -176,11 +176,3 @@ wechat-miniprogram/
   tail -15 /home/admin/.pm2/logs/wechat-backend-error.log
   ```
 - 小程序控制台输出。
-
----
-
-### 下一步
-- 将 `yourdomain.com` 替换为你的实际域名。
-- 如果需要调整内容或添加更多说明，告诉我！
-
-这份 `README.md` 涵盖了项目的安装、配置和使用，适合你的微信小程序聊天机器人项目。试着部署并测试吧！
