@@ -1,0 +1,35 @@
+<view class="chat-container">
+  <!-- Header -->
+  <view class="header">
+    <text>Nineoneai</text>
+  </view>
+
+  <!-- Chat History -->
+  <scroll-view scroll-y class="chat-history" id="chat-history">
+    <view wx:for="{{messages}}" wx:key="index" class="message-container {{item.role === 'user' ? 'user-message-container' : 'assistant-message-container'}}">
+      <image class="avatar" src="{{item.role === 'user' ? 'https://static.vecteezy.com/system/resources/previews/009/890/457/non_2x/user-icon-for-web-site-login-head-sign-icon-design-free-vector.jpg' : 'https://qph.cf2.poecdn.net/main-thumb-pb-5492287-200-gpytlazikpfbrplrgvjrenuykrmxlsda.jpeg'}}"></image>
+      <view class="{{item.role === 'user' ? 'user-message' : 'assistant-message'}}">{{item.content}}</view>
+    </view>
+    <view class="thinking-indicator" wx:if="{{isThinking}}">AI 正在思考...</view>
+  </scroll-view>
+
+  <!-- New Chat Button -->
+  <view class="new-chat">
+    <button bindtap="startNewChat">开启新对话</button>
+  </view>
+
+  <!-- Input Area -->
+  <view class="input-area">
+    <input type="text" value="{{userInput}}" bindinput="updateInput" placeholder="给Deepseek发送信息" />
+    <button bindtap="sendMessage">发送</button>
+  </view>
+
+  <!-- Button Toolbar -->
+  <view class="button-toolbar">
+    <picker range="{{modelList}}" bindchange="changeModel">
+      <button>{{selectedModelName}}</button>
+    </picker>
+    <button bindtap="toggleR1" class="{{isR1Enabled ? 'active' : ''}}">🤔深度思考</button>
+    <button bindtap="toggleSearch" class="{{isSearchEnabled ? 'active' : ''}}">🌎联网搜索</button>
+  </view>
+</view>
