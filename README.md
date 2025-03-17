@@ -32,10 +32,8 @@ wechat-miniprogram/
 
 ## 体验
 ### 1. URL
-        ```bash
         api.nineonepassword.online
 ### 2. test ssh 
-    ```bash
     curl -X POST  https://api.nineonepassword.online/api/chat -H "Content-Type: application/json" -d '{"messages":[{"role":"system","content":"You are a helper"}],"input":"Hi","r1":false,"search":false}'
 
 ## 安装与配置
